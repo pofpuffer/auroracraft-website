@@ -3,8 +3,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #fff;
-    padding: 15px 7%;
+    background: linear-gradient(45deg, #171440, #37173f);
+    padding: 4px 7%;
 
 }
 
@@ -13,8 +13,46 @@
     cursor: pointer;
 }
 
+
+.navbar-logo {
+  color: #fff;
+  justify-self: start;
+  margin-right: 100px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
 .nav-menu {
-    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-gap: 25px;
     list-style: none;
     text-align: center;
+    width: 80vw;
+    justify-content: top;
+    margin-right: 20rem;
+}
+
+.nav-item {
+    height: 150px;
+}
+
+.nav-links {
+    color: #fff;
+    text-shadow: #37173f;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    height: 100%;
+}
+
+.nav-links:hover {
+    background: linear-gradient(45deg, #6c00fa, #db1334);
+    border-bottom: 5px solid #fff;
+    transition: all 0.2s ease-out;
 }

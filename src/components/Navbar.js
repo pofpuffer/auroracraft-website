@@ -20,11 +20,14 @@ function Navbar() {
     return (
         <div className='navbar-navigator'>
             <Link to="/" className="navbar-logo">
-                <img src={logo} alt="" className='logo' /> AuroraCraft
+                <img src={logo} alt="" className='logo' /> <b>AuroraCraft SMP</b>
             </Link>
+            <span/><span/><span/><span/><span/><span/><span/><span/><span/><span/><span/><span/><span/><span/>
+            <div className='menu-icon' onClick={handleClick}>
+            <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+            </div>
 
-
-            <ul className='nav-menu'>
+            <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                 <li className='nav-item'>
                     <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                     Home

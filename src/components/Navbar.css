@@ -9,6 +9,7 @@
 	animation: bg-animation 6s ease infinite;
 }
 
+
 @keyframes bg-animation {
 	0% {
 		background-position: 0% 50%;
@@ -28,7 +29,7 @@
 .logo {
     width: 160px;
     cursor: pointer; 
-    transition: all 0.2s ease-in;
+    transition: all 0.5s ease;
 }
 
 .logo:hover {
@@ -107,7 +108,7 @@
 .fa-bars {
   color: #fff;
     display: flex;
-    padding: 25px 10px;
+    padding: 5px 2px;
     filter: drop-shadow(0px 5px 4px #0f002f);
 }
 
@@ -128,9 +129,9 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        height: 90vh;
+        height: 100vh;
         position: absolute;
-        top: 172px;
+        top: 89px;
         left: -100%;
         opacity: 1;
         transition: all 0.5s ease;
@@ -146,7 +147,8 @@
 
     .nav-links {
         text-align: center;
-        padding: 2rem;
+        font-size: clamp(16px, 2vh, 48px);
+        padding: clamp(16px, 6vh, 48px);
         width: 100%;
         display: table;
     }
@@ -157,7 +159,7 @@
     }
 
     .logo {
-        width: 160px;
+        width: clamp(75px, 5vw, 160px);
         cursor: pointer;
     }
 
@@ -174,7 +176,7 @@
     .fa-times {
         color: #fff;
         display: flex;
-        padding: 25px 12px;
+        padding: 5px;
         filter: drop-shadow(0px 5px 4px #0f002f);
     }
 

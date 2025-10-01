@@ -97,7 +97,7 @@
 .nav-links:hover {
 	background: linear-gradient(45deg, #2c5d8b, #3c81c5, #417ad5, #624dd6);
 	background-size: 400% 400%;
-	animation: gradient 5s ease infinite;
+	animation: bg-animation 5s ease infinite;
     border-bottom: 5px solid #fff;
     transition: all 0.2s ease-out;
     border-radius: 5px;

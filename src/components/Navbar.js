@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import {Button} from './Button';
 import './Navbar.css'
 import {Link} from 'react-router-dom'
 import logo from '../assets/logo.png' 
@@ -22,7 +21,7 @@ function Navbar() {
             <Link to="/" className="navbar-logo">
                 <img src={logo} alt="" className='logo' /> <b>AuroraCraft SMP</b>
             </Link>
-            <span/><span/><span/><span/><span/><span/><span/><span/><span/><span/><span/><span/><span/><span/>
+
             <div className='menu-icon' onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
             </div>

@@ -3,41 +3,67 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-	background: linear-gradient(-45deg, #1e1667, #422d95, #5236be, #9947d7);
+    padding: 7px 7%;
+    background: linear-gradient(-45deg, #1e1667, #422d95, #5236be, #9947d7);
 	background-size: 400% 400%;
-	animation: gradient 10s ease infinite;
-    padding: 5px 7%;
+	animation: bg-animation 6s ease infinite;
 }
 
-@keyframes gradient {
+@keyframes bg-animation {
 	0% {
 		background-position: 0% 50%;
+        filter: hue-rotate(0deg);
 	}
 	50% {
 		background-position: 100% 50%;
+        filter: hue-rotate(-5deg);
 	}
 	100% {
 		background-position: 0% 50%;
+        filter: hue-rotate(0deg)
 	}
 }
 
+
 .logo {
     width: 160px;
-    cursor: pointer;
+    cursor: pointer; 
+    transition: all 0.2s ease-in;
+}
+
+.logo:hover {
+    filter: brightness(125%) contrast(125%) drop-shadow(0px 5px 4px #0f00ef);
+    transition: all 0.1s ease-out;
 }
 
 
 .navbar-logo {
     color: #fff;
     justify-self: start;
-    margin-right: 100px;
+    margin-right: 50px;
     cursor: pointer;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: clamp(1rem, 5vw, 2.3rem);
     display: flex;
     align-items: center;
-    filter: drop-shadow(0px 5px 4px #0f002f);
     font-family: 'Fredoka', sans-serif;
+    animation: hueshift 6s ease-in-out infinite;
+    white-space: nowrap;
+}
+
+@keyframes hueshift {
+	0% {
+		filter: hue-rotate(0deg) drop-shadow(0px 5px 4px #0f002f);
+	}
+	33% {
+		filter: hue-rotate(-5deg) drop-shadow(0px 7px 5px #0f002f);
+	}
+    66% {
+        filter: hue-rotate(5deg) drop-shadow(0px 7px 6px #0f002f);
+    }
+	100% {
+		filter: hue-rotate(0deg) drop-shadow(0px 5px 4px #0f002f);
+	}
 }
 
 
@@ -55,13 +81,13 @@
 
 .nav-links {
     color: #fff;
-    text-shadow: 0px 3px 2px #0f002f;
+    text-shadow: 0px 2px 2px #0f002f;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 28px;
     padding: 0.5rem 1rem;
     height: 100%;
     border-radius: 5px;
@@ -69,18 +95,19 @@
 }
 
 .nav-links:hover {
-	background: linear-gradient(-45deg, #2c5d8b, #3c81c5, #417ad5, #624dd6);
+	background: linear-gradient(45deg, #2c5d8b, #3c81c5, #417ad5, #624dd6);
 	background-size: 400% 400%;
 	animation: gradient 5s ease infinite;
     border-bottom: 5px solid #fff;
     transition: all 0.2s ease-out;
     border-radius: 5px;
+    box-shadow: 0px 0px 16px 12px rgba(50,150,200,0.4);
 }
 
 .fa-bars {
   color: #fff;
     display: flex;
-    padding: 20px 10px;
+    padding: 25px 10px;
     filter: drop-shadow(0px 5px 4px #0f002f);
 }
 
@@ -110,7 +137,7 @@
     }
 
     .nav-menu.active {
-        background: #242222;
+        background: linear-gradient(45deg, #1c4d5b, #2c51a5, #215ab5, #422da6);
         left: 0;
         opacity: 1;
         transition: all 0.5s ease;
@@ -147,7 +174,7 @@
     .fa-times {
         color: #fff;
         display: flex;
-        padding: 20px 12px;
+        padding: 25px 12px;
         filter: drop-shadow(0px 5px 4px #0f002f);
     }
 

@@ -96,7 +96,8 @@
 }
 
 .nav-links:hover {
-	background: linear-gradient(45deg, #2c5d8b, #3c81c5, #417ad5, #624dd6);
+	background: linear-gradient(45deg, #2c5d8b, #3c81c5, #417ad5, #ff4dd6);
+    /* background: linear-gradient(45deg, #2c5d8b, #3c81c5, #417ad5, #624dd6); */
 	background-size: 400% 400%;
 	animation: bg-animation 5s ease infinite;
     border-bottom: 5px solid #fff;
@@ -126,6 +127,7 @@
     }
 
     .nav-menu {
+        background: linear-gradient(45deg, #1c4d5b, #2c51a5, #215ab5, #422da6);
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -138,7 +140,6 @@
     }
 
     .nav-menu.active {
-        background: linear-gradient(45deg, #1c4d5b, #2c51a5, #215ab5, #422da6);
         left: 0;
         opacity: 1;
         transition: all 0.5s ease;

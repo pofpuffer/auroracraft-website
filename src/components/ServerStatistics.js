@@ -26,15 +26,15 @@ function ServerStatistics() {
         });
     }, []); 
 
-    if (loading) return <p className="info">Loading statistics...</p>;
-    if (error) return <p className="info">Error: {error.message}</p>;
-    if (!statistic ) return <p className="info">No data available.</p>;
+    if (loading) return <p className="info-list">Loading statistics...</p>;
+    if (error) return <p className="info-list">Error: {error.message}</p>;
+    if (!statistic ) return <p className="info-list">No data available.</p>;
     
     
     if (statistic.online) return (
-        <div>
-            <pre className="info-online"><b>Status: </b>{statistic.online ? "Online" : "Offline"}</pre>
-            <pre className="info-playercount"> <b>Players online: </b>{JSON.stringify(statistic.players.online, null, 2)} / {JSON.stringify(statistic.players.max, null, 2)}</pre>
+        <div className="info-list">
+            <pre className={statistic.online ? "info-status" : "info-status-offline"}><b>Status: </b>{statistic.online ? "Online" : "Offline"}</pre>
+            {statistic.online ? <pre className="info-playercount"> <b>Players online: </b>{JSON.stringify(statistic.players.online, null, 2)} / {JSON.stringify(statistic.players.max, null, 2)}</pre> : ""}
         </div>
     );
 }

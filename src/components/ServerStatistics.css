@@ -1,11 +1,78 @@
-.info {
+.info-list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 7%;
     color: #fff;
     font-family: 'Fredoka', sans-serif;
     font-size: 24px;
-    width: 500px;
+}
+
+.info-status {
+    color: #fff;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 24px;
+    width: 20vh;
     border-radius: 25px;
-    background: linear-gradient(145deg, #021b17, #02201c);
-    box-shadow:  18px 18px 35px #011411,
-                -18px -18px 35px #032823;
+    background: conic-gradient(from var(--gradient-angle) at 50% 150%, #46be00, #09712d, #09712d, #46be00);
+    box-shadow:  2px 2px 6px #3c8005,
+                -2px -2px 6px #032823;
     padding: 20px 20px;
+    text-shadow: 0px 2px 2px #0f002f;
+    animation: rotate-gradient 5s linear infinite;
+}
+
+.info-status-offline {
+    color: #fff;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 24px;
+    width: 20vh;
+    border-radius: 25px;
+    background: conic-gradient(from var(--gradient-angle) at 50% 100%, #be0000, #710002, #710002, #be0000);
+    box-shadow:  2px 2px 6px #011411,
+                -2px -2px 6px #032823;
+    padding: 20px 20px;
+    text-shadow: 0px 2px 2px #0f002f;
+    animation: rotate-gradient 5s ease infinite;
+}
+
+@property --gradient-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes rotate-gradient {
+  to {
+    --gradient-angle: 360deg;
+  }
+}
+
+.info-playercount {
+    color: #fff;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 24px;
+    width: 25vh;
+    border-radius: 25px;
+    background: radial-gradient(circle at 0% -20%, #1d0637, #320025, #002745, #220062);
+    padding: 20px 20px;
+    text-shadow: 0px 2px 2px #0f002f;
+    animation: playercount-animation 5s ease infinite;
+}
+
+
+@keyframes playercount-animation {
+	0% {
+        filter: hue-rotate(0deg);
+	}
+	50% {
+        box-shadow:  6px 6px 16px #0812a3,
+                    -6px -6px 16px #3a13a3;
+        text-shadow: 0px 2px 2px #2f44ff;
+        filter: hue-rotate(90deg);
+	}
+	100% {
+        filter: hue-rotate(0deg)
+	}
 }

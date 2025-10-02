@@ -9,5 +9,25 @@
 .container {
     width: 100vw;
     min-height: 100vh;
-    background: #BCD0F5;
+    background: radial-gradient(circle at 50% 100%, #1d050f, #16031b, #001120, #011811);
+    background-size: 500% 500%;
+    animation: move-bg 40s ease-in-out infinite alternate;
+}
+
+@keyframes move-bg {
+  0% {
+    background-position: -50% 0%;
+  }
+  25% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 50% 0%;
+  }
+  75% {
+    background-position: 0% -50%;
+  }
+  100% {
+    background-position: -50% 0%;
+  }
 }

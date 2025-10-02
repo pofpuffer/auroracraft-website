@@ -1,0 +1,11 @@
+.info {
+    color: #fff;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 24px;
+    width: 500px;
+    border-radius: 25px;
+    background: linear-gradient(145deg, #021b17, #02201c);
+    box-shadow:  18px 18px 35px #011411,
+                -18px -18px 35px #032823;
+    padding: 20px 20px;
+}

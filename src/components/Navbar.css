@@ -96,12 +96,12 @@
 }
 
 .nav-links:hover {
-	background: linear-gradient(45deg, #2c5d8b, #3c81c5, #417ad5, #ff4dd6);
+	background: linear-gradient(45deg, #ff5d8b, #3c81c5, #417ad5, #aadd55);
     /* background: linear-gradient(45deg, #2c5d8b, #3c81c5, #417ad5, #624dd6); */
 	background-size: 400% 400%;
 	animation: bg-animation 5s ease infinite;
     border-bottom: 5px solid #fff;
-    transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out; 
     border-radius: 5px;
     box-shadow: 0px 0px 16px 12px rgba(50,150,200,0.4);
 }
@@ -136,13 +136,13 @@
         top: 89px;
         left: -100%;
         opacity: 1;
-        transition: all 0.5s ease;
+        transition: all 0.3s ease;
     }
 
     .nav-menu.active {
         left: 0;
         opacity: 1;
-        transition: all 0.5s ease;
+        transition: all 0.6s ease;
         z-index: 1;
     }
 
